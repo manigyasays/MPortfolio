@@ -1,0 +1,896 @@
+/* BODY */
+html{
+  font-size: 100%;
+  line-height: 1.2rem;
+  /* text-size adjust is to maintain the text-size even when the users rotates their phone to landscape view */
+  -webkit-text-size-adjust: 100%;
+  /* Firefox supports only the android version and safari supports only the ios version at the moment according to MDN (2023)*/
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background-color: rgba(253, 244, 244, 30%);
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0px;
+}
+/*-------------------------------------------*/
+
+/* GENERAL */
+/* Fonts */
+.large{
+  font-weight: normal;
+  line-height: normal;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 5rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0px;  
+  background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-wrap: break-word;
+}
+
+.medium-spacing{
+  font-weight: normal;
+  line-height: normal;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  margin: 0px;
+}
+
+.medium-spacing-halfsize{
+  font-weight: normal;
+  line-height: normal;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin: 0px;
+}
+
+.main-title-large{
+  font-weight: normal;
+  line-height: normal;
+  font-size: 3rem;
+}
+
+.main-title{
+  font-weight: normal;
+  line-height: normal;
+  font-size: 1.5rem;
+}
+
+.small{
+  font-weight: normal;
+  font-size: 0.7rem;
+}
+
+.quote{
+  font-family: 'Covered By Your Grace', cursive, sans-serif;
+  font-size: 1.5em;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.bold{
+  font-weight: bold;
+}
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+.colorful-letter{
+  background-image: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.icon-size {
+  font-size: 2rem; /* Adjust this value as needed */
+  margin-right: 10px; /* Optional: Adds some spacing between the icons */
+}
+
+/* Background colors */
+.baby-pink{
+  background-color: rgba(232, 129, 253, 0.285);
+  margin: 10px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.baby-pink-light{
+  background-color: rgba(225, 114, 243, 0.368);
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Setting alignments and sizing */
+/* for the flexbox */
+.wrapper{
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  gap: 20px 20px;
+}
+
+.column{
+  flex: 50%;
+}
+/* OVERWRITE AND NEW SETTINGS project*/
+.column{
+  -webkit-transition: background-color 3s; /* For Safari 3.0 to 6.0 */
+  transition: background-color 3s; /* For modern browsers */
+}
+
+.column:hover, .column:active{
+  background-color: rgba(243, 140, 255, 0.3);
+}
+.w-900{
+  max-width: 900px;
+  margin: auto;
+}
+.col-md-4 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 33.33333%;
+      -ms-flex: 0 0 33.33333%;
+          flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.img-responsive {
+  width: 100% !important;
+}
+
+.rounded {
+  border-radius: 4px;
+}
+
+/* for the grid system */
+.grid-system-2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid-system-4{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* other */
+.max-width{
+  max-width: 450px;
+}
+
+.max-height{
+  max-height: 350px;
+}
+
+.align-center{
+  align-self: center;
+}
+
+.justify-content{
+  justify-content: right;
+}
+
+.justify{
+  text-align: justify;
+}
+
+.center{
+  text-align: center;
+}
+
+.padding{
+  padding: 20px;
+}
+
+.padding-top{
+  padding-top: 20px;
+}
+
+.padding-right{
+  padding-right: 20px;
+}
+
+.padding-bottom{
+  padding-bottom: 20px;
+}
+
+.padding-left{
+  padding-left: 20px;
+}
+
+.margin-auto{
+  margin: auto;
+}
+
+.margin-trbl10{
+  margin: 10px;
+}
+
+/* for sticky bottom button */
+.flex{
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom{
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* Miscellaneous */
+.button{
+  background-color: rgba(253, 129, 243, 0.3);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5%;
+  color: black;
+}
+
+/* I only used button-outline on this project, but you may like the other one more */
+.button-outline{
+  border: 2px solid  rgba(253, 129, 243, 0.3);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5%;
+  color: black;
+}
+
+.link{
+  text-decoration: none;
+}
+
+/* I had to double this code, because of the :hover and :active on link above */
+.link-no-scale{
+  text-decoration: none;
+}
+
+.no-padding-list-item{
+  padding-left: 0;
+}
+
+.padding-list-10{
+  padding: 10px;
+}
+
+.no-bullet-list{
+  list-style-type: none;
+}
+/* ---------------------------------- */
+
+/* ANIMATIONS AND OTHER BEAUTIES */
+.button-outline:hover, .button-outline:active{
+  border: 2px solid  rgba(253, 129, 249, 0.3);
+  background-color: rgba(253, 129, 228, 0.6);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5%;
+  color: rgb(255, 255, 255);
+  transition: background-color 1s ease, color 1s ease;
+}
+
+.link:hover, .link:active{
+  font-size: 1.2rem;
+  transform: scale(1.5);
+  transition: 1s ease-in-out;
+  /* second solution: */
+  /* font-size: 1.2rem; 
+  transition: font-size 2s ease-in-out;  */
+}
+
+.progress-bar:hover, .progress-bar:active {
+  box-shadow: 5px 5px 5px #cdadcd;
+  transition: box-shadow 1s ease;
+}
+
+/* ---------------------------------- */
+
+/* NAV */
+nav {
+  margin-bottom: 30px;
+}
+
+.main-nav{
+  background-color: rgb(253, 249, 249);
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 20px;
+  margin: 0px;
+}
+
+.main-nav li {
+  padding: 5px 10px;
+}
+
+.main-nav li a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.main-nav li a:hover {
+  color: rgb(249, 175, 254);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sticky {
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
+}
+
+/* Nav-icon */
+.toggle, #drop{
+  display: none;
+}
+
+#main-toggle{
+  border: 1px solid #d736df4d;
+  float: right;
+  padding: 20px;
+  /* position: relative; */
+  user-select: none;
+}
+
+.nav-icon{
+  background-color: #c936df4d;
+  display: block;
+  height: 3px;
+  width: 10px;
+  position: relative;
+}
+
+.nav-icon::before,
+.nav-icon::after{
+  background-color: #cb36df4d;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.nav-icon::before{
+  top: 5px;
+}
+
+.nav-icon::after{
+  top: -5px;
+}
+/* ---------------------------------- */
+
+
+/*/ portfolio wrapper */
+.portfolio-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card .portfolio-card-img {
+  width: 100%;
+}
+
+.portfolio-card .portfolio-card-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  background-image: -webkit-linear-gradient(bottom, #c936df3e 0%, rgba(234, 223, 237, 0.7) 99%, rgba(236, 223, 237, 0.8) 100%);
+  background-image: linear-gradient(to top, #ecdfed 0%, rgba(236, 223, 237, 0.7) 99%, rgba(234, 223, 237, 0.8) 100%);
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-card .portfolio-card-overlay {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+.portfolio-card .portfolio-card-overlay .portfolio-card-caption {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.portfolio-card:hover .portfolio-card-overlay {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+@media (max-width: 767.98px) {
+  .portfolio-card {
+    margin-bottom: 30px;
+  }
+  .service-card {
+    margin-bottom: 30px;
+  }
+}
+
+/* FOOTER */
+footer{
+  color: #000000;
+  text-align: center;
+  padding: 20px 0px;
+}
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #ac1ef3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+
+/* ---------------------------------- */
+
+/* INTRODUCTION */
+.header-img{
+  border-radius: 70%;
+}
+/* ---------------------------------- */
+
+/* ARTICLE */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* ABOUT ME */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* SKILLS */
+.skills {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.progress-bar {
+  background-color: #353b48;
+  display: block;
+  height: 10px;
+  border-radius: 20px;
+}
+
+.progress-bar span {
+  height: 10px;
+  float: left;
+  background: linear-gradient(135deg, rgb(250, 113, 283)0%, rgb(255, 142, 134)60%);
+  border-radius: 20px;
+  -webkit-background: linear-gradient(135deg, rgb(250, 113, 283) 0%, rgb(255, 142, 134) 60%);
+  -webkit-border-radius: 20px;
+}
+
+.Tableau {
+  width: 90%;
+  animation: Tableau 3s;
+}
+
+.sql {
+  width: 75%;
+  animation: sql 3s;
+}
+
+.google {
+  width: 63%;
+  animation: google 3s;
+}
+
+.Python {
+  width: 54%;
+  animation: Python 3s;
+}
+
+.Visualization {
+  width: 90%;
+  animation: Visualization 3s;
+}
+
+.Modelling {
+  width: 85%;
+  animation: Modelling 3s;
+}
+
+.problem-solving {
+  width: 82%;
+  animation: problem-solving 3s;
+}
+
+.ETL {
+  width: 75%;
+  animation: ETL 3s;
+}
+
+@keyframes Tableau {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 90%;
+  }
+}
+
+@keyframes sql {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+
+@keyframes google {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 63%;
+  }
+}
+
+@keyframes Python {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 54%;
+  }
+}
+
+@keyframes Visualization {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 90%;
+  }
+}
+
+@keyframes Modelling {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 85%;
+  }
+}
+
+@keyframes problem-solving {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 82%;
+  }
+}
+
+@keyframes ETL {
+  0% {
+      width: 0%;
+  }
+  100% {
+      width: 75%;
+  }
+}
+/* ---------------------------------- */
+
+/* PROJECTS */
+/* I also used these card settings on other sub-pages */
+.card{
+  box-shadow: 0 3px 10px rgb(127 110 187 / 0.2); 
+  padding: 20px;
+}
+
+.box{
+  display: block;
+  width: 100px;
+}
+/* ---------------------------------- */
+
+/* CONTACT ME */
+.box-contact{
+  display: block;
+  width: 100%; 
+  text-align: center;
+}
+
+.logo{
+  width: 50px;
+}
+/* ---------------------------------- */
+
+/* SPECIAL THANKS */
+/* Everything here is made with general classes. Find them in the GENERAL section */
+/* ---------------------------------- */
+
+/* RESPONSIVENESS */
+/* Had to pay attention for that wondow.innerWidth when calculated max-width */
+@media screen and (max-width: 867px){
+  body{
+      font-size: 90%;
+  }
+
+  .grid-system-2{
+      grid-template-columns: 1fr;
+  }
+
+  .large{
+      font-size: 4rem;
+  }
+
+  .medium-spacing{
+      font-size: 2.5rem;
+  }
+
+  .main-title-large{
+      font-size: 2rem;
+      text-align: center;  
+      margin: 0;
+  }
+
+  .main-title{
+      text-align: center;
+      margin: 0;
+  }
+
+  .small{
+      font-size: 0.6rem;
+  }
+
+  .max-width{
+      max-width: 300px
+  }
+
+  .max-height{
+      max-height: 250px;
+  }
+
+  .padding-top{
+      padding-top: 10px;
+  }
+  
+  .padding-right{
+      padding-right: 10px;
+  }
+
+  .padding-bottom{
+      padding-bottom: 10px;
+  }
+  
+  .padding-left{
+      padding-left: 10px;
+  }
+
+  .logo{
+      width: 40px;
+  }
+}
+
+/* wrapper on home page looks better with this @media */
+@media screen and (max-width: 750px){
+  .wrapper{
+      flex-direction: column;
+      gap: 20px 0px;
+  }
+
+  .column{
+      flex: 100%;
+  }
+
+  .box{
+      margin: auto;
+  }
+
+  .thanks{
+      text-align: center;
+  }
+}
+
+/* media query for hamburger menu with dropdown */
+@media screen and (max-width: 510px){
+  .main-nav{
+      display: none;
+  }
+
+  .toggle{
+      display: block;
+      background-color: #ffffff;
+      border: 1px solid #ee81fd4d;
+  }
+  
+  .toggle:hover{
+      background-color: #f0e7e7;
+  }
+  
+  #drop:checked+.main-nav{
+      display: block;
+  }
+
+  nav{
+      padding-bottom: 25px;
+  }
+
+  .max-width{
+      max-width: 100%;
+  }
+}
+/* MEDIA OVERWRITE AND NEW SETTINGS Skill set */
+@media screen and (max-width: 950px){
+  .grid-flip{
+      order: 1;
+  }
+  
+  .main-title{
+      text-align: center;
+  }
+}
+
+
+
+/* Project*/
+@media (prefers-color-scheme: dark) {
+  @media screen and (max-width: 929px) {
+      .baby-pink-light {
+          margin-left: auto;
+          margin-right: auto;
+      }
+  }
+}
+
+/* media query for smaller screens */
+/* smaller fonts were my way to go */
+@media screen and (max-width: 377px){
+  body{
+      line-height: 1.5rem;
+  }
+
+  .large{
+      font-size: 3rem;
+  }
+
+  .medium-spacing{
+      font-size: 1.5rem;
+  }
+
+  .medium-spacing-halfsize{
+      font-size: 1.5rem;
+  }
+
+  .main-title{
+      font-size: 1rem;
+  }
+
+  .main-title-large{
+      font-size: 1.5rem;
+  }
+}
+
+
+/* DARK THEME */
+@media (prefers-color-scheme: dark) {
+  body {
+      background-color: rgba(45, 45, 45, 1);
+      color: white;
+  }
+
+  .baby-pink {
+      background-color: rgb(239, 162, 243);
+  }
+
+  .baby-pink-light {
+      background-color: rgba(45, 45, 45, 1);
+      border: 2px solid rgb(238, 162, 243);
+  }
+
+  .main-nav {
+      background-color: rgba(45, 45, 45, 1);
+  }
+
+  .main-nav li a {
+      color: white;
+  }
+
+  .main-nav li a:hover {
+      color: rgb(251, 175, 254);
+  }
+
+  #main-toggle{
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background-color: rgba(45, 45, 45, 1);
+  }
+  
+  .nav-icon{
+      background-color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .nav-icon::before,
+  .nav-icon::after{
+      background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .button-outline{
+      border: 2px solid rgb(251, 175, 254);
+      color: white;
+  }
+
+  .button-outline:hover, .button-outline:active{
+      border: 2px solid rgb(254, 175, 254);
+      background-color: rgb(254, 175, 210);
+  }
+
+  .card{
+      box-shadow: 0 0px 0px; 
+      border: 2px solid rgb(245, 175, 254);
+  }
+
+  .logo{
+      background-color: white;
+      padding: 2px;
+      border-radius: 4px;
+  }
+
+  .hobbies{
+      background-color: white;
+      border-radius: 100%;
+      padding: 10px;
+  }
+
+  footer{
+      color: white;
+  }
+
+  @media screen and (max-width: 929px) {
+      .baby-pink-light {
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+  }
+}
